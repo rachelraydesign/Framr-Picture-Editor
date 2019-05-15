@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../jQuery/jquery-ui-1_12_1/jquery-ui.js"></script>
+	<script src="../jQuery/TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js"></script>
+	<script src="../jQuery/Framr.js"></script>
+	<script src="../jQuery/jscolor.min.js"></script>
+	
+	<link href="../jQuery/jquery-ui-1_12_1/jquery-ui.css" rel="stylesheet" type="text/css">
+	<link href="../CSS/Framr.css" rel="stylesheet" type="text/css">
+	<title>Index</title>
+</head>
+<body>
+	<header class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Framr</h1>
+			</div>
+		</div>
+	</header>
+	<main class="container">
+		<div class="row">
+			<div class="col-sm-8" id="picFrame">
+				<div id="frame">
+					<div id="insideFrame"></div>
+				</div>
+				<div id="frameNamer"></div>
+			</div>
+			<div class="col-sm-4" id="options">
+				<h2>Style Options</h2><br>
+				<form>
+					<label class="name" for="frameName">Frame Name</label>
+					<br>
+					<input id="frameName" placeholder="Enter Name" size="25" type="text">
+				</form><br>
+				
+				<div class="name">
+					Padding
+				</div>
+				<div class="slider" id="padding"></div>
+				<div class="container"></div>
+					<button id="resetSize">Delete</button>
+				
+				<div class="name">
+					Roundness
+				</div>
+				<div class="slider" id="roundness"></div>
+				<div class="container"></div>
+					<button id="resetRoundness">Delete</button>
+				
+				<div class="name">
+					Thickness
+				</div>
+				<div class="slider" id="thickness"></div><br>
+				<div class="container"></div>
+					<button id="resetThickness">Delete</button>
+				
+				<p class="name">Colour</p><input class="jscolor { onFineChange:'update(this)'}" value="cc66ff"><br>
+				<br>
+			</div>
+		</div>
+	</main>
+	<script>
+	function update(jscolor) {
+	   
+	   document.getElementById('frame').style.borderColor = '#' + jscolor;
+		//If I allow the user to change the background color then the thicks of the border wont be seen
+	   //document.getElementById('frame').style.backgroundColor = '#' + jscolor;
+	}
+	</script>
+</body>
+</html>
